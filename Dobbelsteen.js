@@ -1,6 +1,7 @@
 <><html>
     <button onclick="random()">rol de dobbelsteen</button>
+    <div id="nummer"></div>
 </html><script>
         function random() {Math.floor(Math.random() * 7)};
-        
+        document.GetElementById("nummer").InnerHTML;
     </script></>
