@@ -1,37 +1,31 @@
 <html>
-    <button onclick=random()>🎲</button>
     <p id="nummer"></p>
+    <button onclick=random()>🎲</button>
 </html>
     <script>
        function random() {
         // alert("!");
              Math.floor(Math.random() * 6) + 1
-             alert(Math.floor);
-            switch (Math.random) {
-                case 1:
-                    alert(1)
+            alert(Math.floor);
+            alert(Math.random);
+            if (Math.random === 1) {
+                alert(1)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen1.png'/>"
-                break;
-                case 2:
+            } else if (Math.random === 2) {
                 alert(2)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen2.png'/>"
-                break;
-                case 3:
+            } else if (Math.random === 3) {
                 alert(3)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen3.png'/>"
-                break;
-                case 4: 
+            } else if (Math.random === 4) {
                 alert(4)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen4.png'/>"
-                break;
-                case 5:
+            } else if (Math.random === 5) {
                 alert(5)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen5.png'/>"
-                break;
-                case 6:
+            } else if (Math.random === 6) {
                 alert(6)
                     document.getElementById("nummer").innerHTML = "<img src='dobbelsteen.png'/>"
-                break;
-            }
+            }           
         };
     </script>
