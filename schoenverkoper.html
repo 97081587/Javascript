@@ -1,10 +1,10 @@
 <html>
-    <p>Heb je een klantenkaart(ja/nee):</p>
+    <p>Heb je een klantenkaart (ja/nee):</p>
     <select name="Klantenkaart" id="Klantenkaart">
         <option value="nee">nee</option>
         <option value="ja">ja</option>
     </select>
-    <p>Hoeveel paar schoenen wil je kopen?</p>
+    <p>Hoeveel paar schoenen wil je kopen:</p>
     <select name="Hoeveel" id="Hoeveel" onchange="HoeveelPaarSchoenen()">
         <option selected>0</option>
         <option value="1">1</option>
@@ -30,9 +30,9 @@
     //alert(Totaal)
         if(Hoeveel > 2 && Klantenkaart == 'ja') {
             Totaal = Totaal - 10 * (Totaal / 100);
-            document.getElementById('AllesTotaal').innerHTML = "Totaalprijs: €" + Totaal.toFixed(2) + ",-";
+            document.getElementById('AllesTotaal').innerHTML = "De prijs van " + Hoeveel + " paar schoenen is: " + Totaal.toFixed(2) + " euro"; 
         } else {
-            document.getElementById('AllesTotaal').innerHTML = "Totaalprijs: €" + Totaal.toFixed(2) + ",-"; 
+            document.getElementById('AllesTotaal').innerHTML = "De prijs van " + Hoeveel + " paar schoenen is: " + Totaal.toFixed(2) + " euro"; 
         }
     }
 </script>
