@@ -16,11 +16,13 @@
     <p id="AllesTotaal"></p>
 </html>
 <script>
-    function HoeveelPaarSchoenen() {
+    function HoeveelPaarSchoenen() {  
     paarSchoenen = 50
+    Hoeveel = document.getElementById('Hoeveel').value;
+    //alert(Hoeveel)
     Totaal = paarSchoenen * Hoeveel
-    alert(Hoeveel)
-        if(Hoeveel > 2) {
+    //alert(Totaal)
+        if(Hoeveel > 2 && == true) {
             Totaal = Totaal - 10 * (Totaal / 100);
             document.getElementById('AllesTotaal').innerHTML = "Totaalprijs: €" + Totaal.toFixed(2) + ",-";
         } else {
