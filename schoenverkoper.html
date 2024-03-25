@@ -1,4 +1,9 @@
 <html>
+    <p>Heb je een klantenkaart(ja/nee):</p>
+    <select name="Klantenkaart" id="Klantenkaart">
+        <option value="nee">nee</option>
+        <option value="ja">ja</option>
+    </select>
     <p>Hoeveel paar schoenen wil je kopen?</p>
     <select name="Hoeveel" id="Hoeveel" onchange="HoeveelPaarSchoenen()">
         <option selected>0</option>
@@ -19,10 +24,11 @@
     function HoeveelPaarSchoenen() {  
     paarSchoenen = 50
     Hoeveel = document.getElementById('Hoeveel').value;
+    Klantenkaart = document.getElementById('Klantenkaart').value;
     //alert(Hoeveel)
     Totaal = paarSchoenen * Hoeveel
     //alert(Totaal)
-        if(Hoeveel > 2 && == true) {
+        if(Hoeveel > 2 && Klantenkaart == 'ja') {
             Totaal = Totaal - 10 * (Totaal / 100);
             document.getElementById('AllesTotaal').innerHTML = "Totaalprijs: €" + Totaal.toFixed(2) + ",-";
         } else {
