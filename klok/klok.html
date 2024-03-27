@@ -1,6 +1,7 @@
 <html>
+
+
     <p id="klok"></p>
-    <p id="klokAfbeelding"></p>
     <p id="datum"></p>
 </html>
 <script>
@@ -20,9 +21,9 @@
         var t = setTimeout(function(){ RealTimeClock() }, 1000); 
     }
     
-    let datum = new Date();
+    let datum = new Date().toDateString();
 
     RealTimeClock();
-    document.getElementById("KlokAfbeelding").innerHTML = "<img width=30 height=30 src='" + klokAfbeelding + ".png'/>"
+   // document.getElementById("KlokAfbeelding").innerHTML = "<img width=30 height=30 src='" + klokAfbeelding + ".png'/>"
     document.getElementById("datum").innerHTML = datum;
 </script>
