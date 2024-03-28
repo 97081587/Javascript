@@ -1,11 +1,11 @@
 <html>
 
 
-    <p id="klok"></p>
+    <p id="klokDigi"></p>
     <p id="datum"></p>
 </html>
 <script>
-    function RealTimeClock() {
+    function RealTimeClockDigi() {
         let vandaag = new Date();
         let hh = vandaag.getHours();
         let mm = vandaag.getMinutes();
@@ -17,13 +17,13 @@
 
         let tijd = hh + ":" + mm + ":" + ss + " ";
 
-        document.getElementById("klok").innerHTML = tijd;
-        var t = setTimeout(function(){ RealTimeClock() }, 1000); 
+        document.getElementById("klokDigi").innerHTML = tijd;
+        var t = setTimeout(function(){ RealTimeClockDigi() }, 1000); 
     }
     
     let datum = new Date().toDateString();
 
-    RealTimeClock();
+    RealTimeClockDigi();
    // document.getElementById("KlokAfbeelding").innerHTML = "<img width=30 height=30 src='" + klokAfbeelding + ".png'/>"
     document.getElementById("datum").innerHTML = datum;
 </script>
