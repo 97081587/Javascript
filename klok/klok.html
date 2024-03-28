@@ -40,16 +40,18 @@
         minute.style.transform = `rotate(${min_rotation}deg)`;
         second.style.transform = `rotate(${sec_rotation}deg)`;
         }, 1000);
-
-        // geluidje
-        var audio = new Audio('koekoek.mp3');
-        if (hh2 == 12 && mm2 == 0 && ss2 == 0) {
-              alert("koekoek!")  
-              audio.play();
-        }
     }
-
     RealTimeClock();
+
+    function geluidje() {
+        var audio = new Audio('koekoek.mp3');
+        audio.play();
+    }
+            
+    if (hh2 == 12 && mm2 == 0 && ss2 == 0) {
+        alert("koekoek!")
+        geluidje()            
+    }
     
     // datum
     let datum = new Date().toDateString();
