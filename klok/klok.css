@@ -1,9 +1,8 @@
 #clockContainer {
     position: relative;
     margin: auto;
-    height: 40vw;
-    /*to make the height and width responsive*/
-    width: 40vw;
+    height: 30vw;
+    width: 30vw;
 }
  
 #hour,

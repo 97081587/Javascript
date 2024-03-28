@@ -28,9 +28,13 @@
 
         // analoog
         setInterval(() => {
-        hr_rotation = 30 * hh + mm / 2;
-        min_rotation = 6 * mm;
-        sec_rotation = 6 * ss;
+        vandaag2 = new Date();
+        hh2 = vandaag2.getHours();
+        mm2 = vandaag2.getMinutes();
+        ss2 = vandaag2.getSeconds();
+        hr_rotation = 30 * hh2 + mm2 / 2;
+        min_rotation = 6 * mm2;
+        sec_rotation = 6 * ss2;
  
         hour.style.transform = `rotate(${hr_rotation}deg)`;
         minute.style.transform = `rotate(${min_rotation}deg)`;
