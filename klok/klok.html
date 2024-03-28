@@ -1,16 +1,45 @@
-<!DOCTYPE html>
 <html>
-<head>
     <link rel="stylesheet" href="klok.css">
-    <script src="klok.js"></script>
-</head>
-<body>
     <div id="clockContainer">
         <div id="hour"></div>
         <div id="minute"></div>
         <div id="second"></div>
     </div>
-    <p id="klokDigi"></p>
+    <p id="klok"></p>
     <p id="datum"></p>
-</body>
 </html>
+
+<script>
+    function RealTimeClock() {
+        // digitaal
+        let vandaag = new Date();
+        let hh = vandaag.getHours();
+        let mm = vandaag.getMinutes();
+        let ss = vandaag.getSeconds();
+
+        hh = (hh < 10) ? "0" + hh : hh;
+        mm = (mm < 10) ? "0" + mm : mm;
+        ss = (ss < 10) ? "0" + ss : ss;
+
+        let tijd = hh + ":" + mm + ":" + ss + " ";
+
+        document.getElementById("klok").innerHTML = tijd;
+        var t = setTimeout(function(){ RealTimeClock() }, 1000);
+
+        // analoog
+        setInterval(() => {
+        hr_rotation = 30 * hh + mm / 2;
+        min_rotation = 6 * mm;
+        sec_rotation = 6 * ss;
+ 
+        hour.style.transform = `rotate(${hr_rotation}deg)`;
+        minute.style.transform = `rotate(${min_rotation}deg)`;
+        second.style.transform = `rotate(${sec_rotation}deg)`;
+        }, 1000);
+    }
+
+    RealTimeClock();
+
+    let datum = new Date().toDateString();
+    document.getElementById("datum").innerHTML = datum;
+</script>
