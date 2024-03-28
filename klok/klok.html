@@ -41,8 +41,11 @@
         second.style.transform = `rotate(${sec_rotation}deg)`;
         }, 1000);
 
+        // geluidje
+        var audio = new Audio('koekoek.mp3');
         if (hh2 == 12 && mm2 == 0 && ss2 == 0) {
               alert("koekoek!")  
+              audio.play();
         }
     }
 
