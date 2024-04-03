@@ -10,6 +10,8 @@
 </html>
 
 <script>
+var koekoekAudio = new Audio('koekoek.mp3');
+
     function RealTimeClockDigi() {
         // digitaal
         let vandaag = new Date();
@@ -35,6 +37,12 @@
         hhA = vandaag2.getHours();
         mmA = vandaag2.getMinutes();
         ssA = vandaag2.getSeconds();
+        // if (ssA == 0) {
+        if (hhA == 0 && mmA == 0 && ssA == 0) {
+            //console.log("geluid")
+            koekoekAudio.play()
+            alert("koekoek!")        
+        }
         hr_rotation = 30 * hhA + mmA / 2;
         min_rotation = 6 * mmA;
         sec_rotation = 6 * ssA;
@@ -43,18 +51,6 @@
         minute.style.transform = `rotate(${min_rotation}deg)`;
         second.style.transform = `rotate(${sec_rotation}deg)`;
         }, 1000);
-
-        //audio
-        vandaag2 = new Date();
-        hhA = vandaag2.getHours();
-        mmA = vandaag2.getMinutes();
-        ssA = vandaag2.getSeconds();
-        var koekoekAudio = new Audio('koekoek.mp3');
-            
-        if (hhA == 12 && mmA == 0 && ssA == 0) {
-            koekoekAudio.play();   
-            alert("koekoek!")        
-        }
     }
     RealTimeClockAnalog();
     
