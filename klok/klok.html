@@ -10,22 +10,25 @@
 </html>
 
 <script>
-    function RealTimeClock() {
+    function RealTimeClockDigi() {
         // digitaal
         let vandaag = new Date();
         let hhD = vandaag.getHours();
         let mmD = vandaag.getMinutes();
         let ssD = vandaag.getSeconds();
 
-        hh = (hhD < 10) ? "0" + hhD : hhD;
-        mm = (mmD < 10) ? "0" + mmD : mmD;
+        hhD = (hhD < 10) ? "0" + hhD : hhD;
+        mmD = (mmD < 10) ? "0" + mmD : mmD;
         ssD = (ssD < 10) ? "0" + ssD : ssD;
 
         let tijd = hhD + ":" + mmD + ":" + ssD + " ";
 
         document.getElementById("klok").innerHTML = tijd;
-        var t = setTimeout(function(){ RealTimeClock() }, 1000);
+        var t = setTimeout(function(){ RealTimeClockDigi() }, 1000);
+    }
+    RealTimeClockDigi();
 
+    function RealTimeClockAnalog() {
         // analoog
         setInterval(() => {
         vandaag2 = new Date();
@@ -41,17 +44,19 @@
         second.style.transform = `rotate(${sec_rotation}deg)`;
         }, 1000);
 
-            function geluidje() {
-            var audio = new Audio('koekoek.mp3');
-            audio.play();
-        }
-                
+        //audio
+        vandaag2 = new Date();
+        hhA = vandaag2.getHours();
+        mmA = vandaag2.getMinutes();
+        ssA = vandaag2.getSeconds();
+        var koekoekAudio = new Audio('koekoek.mp3');
+            
         if (hhA == 12 && mmA == 0 && ssA == 0) {
-            alert("koekoek!")
-            geluidje()            
+            koekoekAudio.play();   
+            alert("koekoek!")        
         }
     }
-    RealTimeClock();
+    RealTimeClockAnalog();
     
     // datum
     let datum = new Date().toDateString();
