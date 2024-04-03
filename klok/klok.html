@@ -38,10 +38,10 @@ var koekoekAudio = new Audio('koekoek.mp3');
         mmA = vandaag2.getMinutes();
         ssA = vandaag2.getSeconds();
         // if (ssA == 0) {
-        if (hhA == 0 && mmA == 0 && ssA == 0) {
+        if (hhA == 12 && mmA == 0 && ssA == 0) {
             //console.log("geluid")
             koekoekAudio.play()
-            alert("koekoek!")        
+            alert("koekoek!")
         }
         hr_rotation = 30 * hhA + mmA / 2;
         min_rotation = 6 * mmA;
