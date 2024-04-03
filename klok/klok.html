@@ -13,15 +13,15 @@
     function RealTimeClock() {
         // digitaal
         let vandaag = new Date();
-        let hh = vandaag.getHours();
-        let mm = vandaag.getMinutes();
-        let ss = vandaag.getSeconds();
+        let hhD = vandaag.getHours();
+        let mmD = vandaag.getMinutes();
+        let ssS = vandaag.getSeconds();
 
-        hh = (hh < 10) ? "0" + hh : hh;
-        mm = (mm < 10) ? "0" + mm : mm;
-        ss = (ss < 10) ? "0" + ss : ss;
+        hh = (hhD < 10) ? "0" + hhD : hhD;
+        mm = (mmD < 10) ? "0" + mmD : mmD;
+        ssD = (ssD < 10) ? "0" + ssD : ssD;
 
-        let tijd = hh + ":" + mm + ":" + ss + " ";
+        let tijd = hhD + ":" + mmD + ":" + ssD + " ";
 
         document.getElementById("klok").innerHTML = tijd;
         var t = setTimeout(function(){ RealTimeClock() }, 1000);
@@ -29,12 +29,12 @@
         // analoog
         setInterval(() => {
         vandaag2 = new Date();
-        hh2 = vandaag2.getHours();
-        mm2 = vandaag2.getMinutes();
-        ss2 = vandaag2.getSeconds();
-        hr_rotation = 30 * hh2 + mm2 / 2;
-        min_rotation = 6 * mm2;
-        sec_rotation = 6 * ss2;
+        hhA = vandaag2.getHours();
+        mmA = vandaag2.getMinutes();
+        ssA = vandaag2.getSeconds();
+        hr_rotation = 30 * hhA + mmA / 2;
+        min_rotation = 6 * mmA;
+        sec_rotation = 6 * ssA;
  
         hour.style.transform = `rotate(${hr_rotation}deg)`;
         minute.style.transform = `rotate(${min_rotation}deg)`;
@@ -46,7 +46,7 @@
             audio.play();
         }
                 
-        if (hh2 == 12 && mm2 == 0 && ss2 == 0) {
+        if (hhA == 12 && mmA == 0 && ssA == 0) {
             alert("koekoek!")
             geluidje()            
         }
