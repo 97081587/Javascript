@@ -10,6 +10,17 @@
 </html>
 
 <script>
+var koekoekAudio1 = new Audio('koekoek1.mp3');
+var koekoekAudio2 = new Audio('koekoek2.mp3');
+var koekoekAudio3 = new Audio('koekoek3.mp3');
+var koekoekAudio4 = new Audio('koekoek4.mp3');
+var koekoekAudio5 = new Audio('koekoek5.mp3');
+var koekoekAudio6 = new Audio('koekoek6.mp3');
+var koekoekAudio7 = new Audio('koekoek7.mp3');    
+var koekoekAudio8 = new Audio('koekoek8.mp3');
+var koekoekAudio9 = new Audio('koekoek9.mp3');
+var koekoekAudio10 = new Audio('koekoek10.mp3');
+var koekoekAudio11 = new Audio('koekoek11.mp3');
 var koekoekAudio12 = new Audio('koekoek12.mp3');
 
     function RealTimeClockDigi() {
@@ -37,10 +48,42 @@ var koekoekAudio12 = new Audio('koekoek12.mp3');
         hhA = vandaag2.getHours();
         mmA = vandaag2.getMinutes();
         ssA = vandaag2.getSeconds();
-        if (ssA == 0) {
-        // if (hhA == 12 && mmA == 0 && ssA == 0) {
+        // if (ssA == 0) {
+        if (hhA == 1||13 && mmA == 0 && ssA == 0) {
+            koekoekAudio1.play()
+            alert("koekoek!")
+        } else if (hhA == 2||14 && mmA == 0 && ssA == 0) {
+            koekoekAudio2.play()
+            alert("koekoek!")
+        } else if (hhA == 3||15 && mmA == 0 && ssA == 0) {
+            koekoekAudio3.play()
+            alert("koekoek!")
+        } else if (hhA == 4||16 && mmA == 0 && ssA == 0) {
+            koekoekAudio4.play()
+            alert("koekoek!")
+        } else if (hhA == 5||17 && mmA == 0 && ssA == 0) {
+            koekoekAudio5.play()
+            alert("koekoek!")
+        } else if (hhA == 6||18 && mmA == 0 && ssA == 0) {
+            koekoekAudio6.play()
+            alert("koekoek!")
+        } else if (hhA == 7||19 && mmA == 0 && ssA == 0) {
+            koekoekAudio7.play()
+            alert("koekoek!")
+        } else if (hhA == 8||20 && mmA == 0 && ssA == 0) {
+            koekoekAudio8.play()
+            alert("koekoek!")
+        } else if (hhA == 9||21 && mmA == 0 && ssA == 0) {
+            koekoekAudio9.play()
+            alert("koekoek!")
+        } else if (hhA == 10||22 && mmA == 0 && ssA == 0) {
+            koekoekAudio10.play()
+            alert("koekoek!")
+        } else if (hhA == 11||23 && mmA == 0 && ssA == 0) {
+            koekoekAudio11.play()
+            alert("koekoek!")
+        } else if (hhA == 12||0o0 && mmA == 0 && ssA == 0) {
             koekoekAudio12.play()
-            stop(1.3);
             alert("koekoek!")
         }
         hr_rotation = 30 * hhA + mmA / 2;
