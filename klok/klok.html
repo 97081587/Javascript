@@ -10,7 +10,7 @@
 </html>
 
 <script>
-var koekoekAudio = new Audio('koekoek.mp3');
+var koekoekAudio12 = new Audio('koekoek12.mp3');
 
     function RealTimeClockDigi() {
         // digitaal
@@ -37,9 +37,10 @@ var koekoekAudio = new Audio('koekoek.mp3');
         hhA = vandaag2.getHours();
         mmA = vandaag2.getMinutes();
         ssA = vandaag2.getSeconds();
-        // if (ssA == 0) {
-        if (hhA == 12 && mmA == 0 && ssA == 0) {
-            koekoekAudio.play()
+        if (ssA == 0) {
+        // if (hhA == 12 && mmA == 0 && ssA == 0) {
+            koekoekAudio12.play()
+            stop(1.3);
             alert("koekoek!")
         }
         hr_rotation = 30 * hhA + mmA / 2;
