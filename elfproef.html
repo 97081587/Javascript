@@ -1,9 +1,15 @@
 <html>
-    <p>Bankrekeningnummer =</p>
-    <input type="number" min="0" placeholder="IBAN" id="IBAN"></input>
+    <form>
+        <p>Bankrekeningnummer =</p>
+        <input type="number" min="0" placeholder="IBAN" id="IBAN"></input> 
+        <button  oninput=BananenSplit()>Invoeren</button>
+    </form>
 </html>
 <script>
-    nummer = document.getElementById("IBAN");
-    myArray = nummer.split(" ");
-    alert(myArray);
+    function BananenSplit(){
+        nummer = document.getElementById("IBAN");
+        losNummers = nummer.toString().split;
+        //myArray = nummer.split(" ");
+        alert(losNummers);
+    }
 </script>
