@@ -1,28 +1,23 @@
 <html>
-    <form oninput=NumArray()>
         <p>Bankrekeningnummer =</p>
         <input  type="text" 
                 inputmode="numeric" 
-                minlength="0"
+                minlength="10"
                 pattern="[0-9\s]{10,12}" 
                 autocomplete="cc-number"
                 maxlength="12" 
                 placeholder="IBAN hier" 
-                id="IBAN">
+                id="IBAN"
+                onchange=BananenSplit()>
         </input> 
-    </form>
 </html>
 <script>
-    function NumArray() {
-
-    }
-
     function BananenSplit(){
 
-        nummer = NumArray()
+        nummer = document.getElementById("IBAN").value;
         losNummers = nummer.toString().split;
         
-        alert(losNummers);
         alert(nummer);
+        alert(losNummers);
     }
 </script>
