@@ -8,12 +8,12 @@
                 maxlength="9" 
                 placeholder="IBAN hier" 
                 id="IBAN"
-                onchange=BananenSplit()>
+                onchange=NummerSplit()>
         </input>
         <button>Klik hier</button> 
 </html>
 <script>
-    function BananenSplit(){
+    function NummerSplit(){
         nummer = document.getElementById("IBAN").value;
         losNummers = nummer.toString().split;
         
