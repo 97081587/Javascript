@@ -2,18 +2,18 @@
         <p>Bankrekeningnummer =</p>
         <input  type="text" 
                 inputmode="numeric" 
-                minlength="10"
-                pattern="[0-9\s]{10,12}" 
+                minlength="7"
+                pattern="[0-9\s]{7,9}" 
                 autocomplete="cc-number"
-                maxlength="12" 
+                maxlength="9" 
                 placeholder="IBAN hier" 
                 id="IBAN"
                 onchange=BananenSplit()>
-        </input> 
+        </input>
+        <button>Klik hier</button> 
 </html>
 <script>
     function BananenSplit(){
-
         nummer = document.getElementById("IBAN").value;
         losNummers = nummer.toString().split;
         
