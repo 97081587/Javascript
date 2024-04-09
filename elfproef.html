@@ -29,10 +29,10 @@
             Rekening8 = losNummers[7] * 2;
             Rekening9 = losNummers[8] * 1;
 
-        // totaal2 = + +
-        // totaal3 = totaal2 / 11;
+        totaal1 = Rekening1 + Rekening2 + Rekening3 + Rekening4 + Rekening5 + Rekening6 + Rekening7 + Rekening8 + Rekening9;
+        totaal2 = totaal1 / 11;
 
-        if (totaal3) {
+        if (totaal2) {
             document.getElementById("Resultaat").innerHTML = "Dit is een geldig IBAN nummer";
         } else {
             document.getElementById("Resultaat").innerHTML= "Dit is geen geldige IBAN nummer";
