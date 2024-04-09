@@ -17,20 +17,21 @@
     function NummerSplit(){
         nummer = document.getElementById("IBAN").value;
         losNummers = nummer.toString().split("");
-        // alert(nummer);
-        // alert(losNummers);
-        for (let i = 0; i < 10; i++) {
-            // alert(i);
-            totaal1 = losNummers * i  
-            alert(totaal1);   
-        }
-        totaal2 = 
-        totaal3 = totaal2 / 11;
+        alert(losNummers);
 
-        // if () {
-        //     document.getElementById("Resultaat").innerHTML = "Dit is een geldig IBAN nummer";
-        // } else {
-        //     document.getElementById("Resultaat").innerHTML= "Dit is geen geldige IBAN nummer";
+        // for (let i = 0; i < 10; i++) {
+        //     // alert(i);
+        //     totaal1 = losNummers * i  
+        //     alert(totaal1);   
         // }
+        alert(losNummers.substr(1))
+        // totaal2 = + +
+        // totaal3 = totaal2 / 11;
+
+        if (totaal3) {
+            document.getElementById("Resultaat").innerHTML = "Dit is een geldig IBAN nummer";
+        } else {
+            document.getElementById("Resultaat").innerHTML= "Dit is geen geldige IBAN nummer";
+        }
     }
 </script>
