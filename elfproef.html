@@ -1,6 +1,6 @@
 <html>
-        <p>Bankrekeningnummer =</p>
-        <input  type="text" 
+    <p>Bankrekeningnummer =</p>
+            <input  type="text" 
                 inputmode="numeric" 
                 minlength="7"
                 pattern="[0-9\s]{7,9}" 
@@ -9,9 +9,9 @@
                 placeholder="IBAN hier" 
                 id="IBAN"
                 onchange=NummerSplit()>
-        </input>
+            </input>
         <button>Klik hier</button> 
-        <p id="Resultaat"></p>
+    <p id="Resultaat"></p>
 </html>
 <script>
     function NummerSplit(){
@@ -19,20 +19,20 @@
         losNummers = nummer.toString().split("");
         //alert(losNummers[0]);
 
-            Rekening1 = losNummers[0] * 9;
-            Rekening2 = losNummers[1] * 8;
-            Rekening3 = losNummers[2] * 7;
-            Rekening4 = losNummers[3] * 6;
-            Rekening5 = losNummers[4] * 5;
-            Rekening6 = losNummers[5] * 4;
-            Rekening7 = losNummers[6] * 3;
-            Rekening8 = losNummers[7] * 2;
-            Rekening9 = losNummers[8] * 1;
+        Rekening1 = losNummers[0] * 9;
+        Rekening2 = losNummers[1] * 8;
+        Rekening3 = losNummers[2] * 7;
+        Rekening4 = losNummers[3] * 6;
+        Rekening5 = losNummers[4] * 5;
+        Rekening6 = losNummers[5] * 4;
+        Rekening7 = losNummers[6] * 3;
+        Rekening8 = losNummers[7] * 2;
+        Rekening9 = losNummers[8] * 1;
 
         totaal1 = Rekening1 + Rekening2 + Rekening3 + Rekening4 + Rekening5 + Rekening6 + Rekening7 + Rekening8 + Rekening9;
         totaal2 = totaal1 / 11;
 
-        if (totaal2) {
+        if (totaal2 == true) {
             document.getElementById("Resultaat").innerHTML = "Dit is een geldig IBAN nummer";
         } else {
             document.getElementById("Resultaat").innerHTML= "Dit is geen geldige IBAN nummer";
