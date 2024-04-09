@@ -11,6 +11,7 @@
                 onchange=NummerSplit()>
         </input>
         <button>Klik hier</button> 
+        <p id="Resultaat"></p>
 </html>
 <script>
     function NummerSplit(){
@@ -22,6 +23,12 @@
 
         for (let i = 0; i < 10; i++) {
             
+        }
+
+        if () {
+            document.getElementById("Resultaat").innerHTML = "Dit is een geldige IBAN nummer";
+        } else {
+            document.getElementById("Resultaat").innerHTML= "Dit is geen geldige IBAN nummer";
         }
     }
 </script>
