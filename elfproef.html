@@ -31,10 +31,10 @@
 
         totaal1 = Rekening1 + Rekening2 + Rekening3 + Rekening4 + Rekening5 + Rekening6 + Rekening7 + Rekening8 + Rekening9;
         alert(totaal1);
-        totaal2 = totaal1 / 11;
+        totaal2 = totaal1 % 11;
         alert(totaal2);
 
-        if (totaal2 == true) {
+        if (totaal2 == 0) {
             document.getElementById("Resultaat").innerHTML = "Dit is een geldig IBAN nummer 👍";
         } else {
             document.getElementById("Resultaat").innerHTML= "Dit is geen geldig IBAN nummer 👎";
