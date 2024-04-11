@@ -1,11 +1,15 @@
 <html>
     <p>vandaag is: </p>
-
+    <p id="datum"></p>
     <p>uw gekozen datum: </p>
-    <input type="date" id=""></input>
+    <input type="date" id="GekozenDatum"></input>
     <br>
     <p id="HoeveelDagen"></p>
 </html>
 <script>
 
+
+    //datum
+    let datum = new Date().toDateString();
+    document.getElementById("datum").innerHTML = datum;
 </script>
