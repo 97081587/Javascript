@@ -7,7 +7,12 @@
     <p id="HoeveelDagen"></p>
 </html>
 <script>
-
+    Difference_In_Time =
+    GekozenDatum.getTime() - datum.getTime();
+ 
+    Difference_In_Days =
+    Math.round
+    (Difference_In_Time / (1000 * 3600 * 24)); 
 
     //datum
     let datum = new Date().toDateString();
