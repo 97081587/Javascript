@@ -12,7 +12,7 @@
     document.getElementById("Datum").innerHTML = Datum;
 
     function DagenBerekening() {
-        let TijdsVerschil = Datum.getTme() - GekozenDatum.getTme();
+        let TijdsVerschil = Datum.getTime() - GekozenDatum.getTime();
 
         let DagenVerschil = Math.round (TijdsVerschil / (1000 * 3600 * 24));
 
