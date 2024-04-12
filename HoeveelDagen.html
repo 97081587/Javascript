@@ -2,7 +2,7 @@
     <p>vandaag is het: </p>
     <p id="Datum"></p>
     <p>uw gekozen datum: </p>
-    <input type="date" id="GekozenDatum" oninput=DagenBerekening()></input>
+    <input type="date" id="GekozenDatum" onchange=DagenBerekening()></input>
     <br>
     <p id="HoeveelDagen"></p>
 </html>
@@ -11,7 +11,10 @@
     let Datum = new Date().toDateString();
     document.getElementById("Datum").innerHTML = Datum;
 
+    // let GekozenDatum = 
+
     function DagenBerekening() {
+        alert(GekozenDatum);
 
         let Dagen = GekozenDatum - Datum;
 
