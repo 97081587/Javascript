@@ -11,13 +11,10 @@
     let Datum = new Date().toDateString();
     document.getElementById("Datum").innerHTML = Datum;
 
-    // let GekozenDatum = 
-
     function DagenBerekening() {
+        let TijdsVerschil = Datum.getTme() - GekozenDatum.getTme();
 
-        alert(GekozenDatum);
-
-        let Dagen = GekozenDatum - Datum;
+        let DagenVerschil = Math.round (TijdsVerschil / (1000 * 3600 * 24));
 
         document.getElementById("HoeveelDagen").innerHTML = "er zit " + Dagen + " dagen er tussen " + GekozenDatum + " en " + Datum ;
     }
