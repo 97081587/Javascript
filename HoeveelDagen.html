@@ -1,20 +1,20 @@
 <html>
     <p>vandaag is het: </p>
-    <p id="datum"></p>
+    <p id="Datum"></p>
     <p>uw gekozen datum: </p>
-    <input type="date" id="GekozenDatum"></input>
+    <input type="date" id="GekozenDatum" oninput=DagenBerekening()></input>
     <br>
     <p id="HoeveelDagen"></p>
 </html>
 <script>
-    Difference_In_Time =
-    GekozenDatum.getTime() - datum.getTime();
- 
-    Difference_In_Days =
-    Math.round
-    (Difference_In_Time / (1000 * 3600 * 24)); 
-
     //datum
-    let datum = new Date().toDateString();
-    document.getElementById("datum").innerHTML = datum;
+    let Datum = new Date().toDateString();
+    document.getElementById("Datum").innerHTML = Datum;
+
+    function DagenBerekening() {
+
+        let Dagen = GekozenDatum - Datum;
+
+        document.getElementById("HoeveelDagen").innerHTML = "er zit " + Dagen + " dagen er tussen " + GekozenDatum + " en " + Datum ;
+    }
 </script>
