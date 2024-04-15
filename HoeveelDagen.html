@@ -8,13 +8,14 @@
 </html>
 <script>
     //datum
-    let Datum = new Date("01/12/2024")
-    let gekozenDatum = new Date("01/34/2024")
-    // .toDateString();
-    // document.getElementById("Datum").innerHTML = Datum;
+    let Datum = new Date().toDateString();
+    document.getElementById("Datum").innerHTML = Datum; 
+
 
     function DagenBerekening() {
-        let TijdsVerschil = Datum - GekozenDatum;
+        let GekozenDatum = new Date().toDateString();
+        
+        let TijdsVerschil = Datum.getDate() - GekozenDatum.getDate();
 
         let DagenVerschil = Math.round (TijdsVerschil / (1000 * 3600 * 24));
 
