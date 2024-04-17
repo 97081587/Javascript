@@ -7,15 +7,17 @@
     <p id="HoeveelDagen"></p>
 </html>
 <script>
-    //datum
-    let Datum = new Date().toDateString();
+    //huidige datum
+    let Datum = new Date();
     document.getElementById("Datum").innerHTML = Datum; 
 
-    function DagenBerekening() {
-       // let GekozenDatum = new Date().toDateString();
-        alert('test');
+    //gekozen datum
+    let GekozenDatum = document.getElementById("GekozenDatum");
+
+    function DagenBerekening() {  
+        alert(GekozenDatum);
         let TijdsVerschil = Datum.getTime() - GekozenDatum.getTime();
-        alert(Datum);
+        //alert(Datum);
         let DagenVerschil = Math.round (TijdsVerschil / (1000 * 3600 * 24));
 
         document.getElementById("HoeveelDagen").innerHTML = "er zit " + DagenVerschil + " dagen er tussen " + Datum + " en " + GekozenDatum ;
