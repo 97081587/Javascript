@@ -9,17 +9,22 @@
 <script>
     //huidige datum
     let Datum = new Date();
-    document.getElementById("Datum").innerHTML = Datum; 
 
-    //gekozen datum
-    let GekozenDatum = document.getElementById("GekozenDatum");
+    let Datum2 = Datum.toDateString();
+    document.getElementById("Datum").innerHTML = Datum2; 
 
-    function DagenBerekening() {  
-        alert(GekozenDatum);
-        let TijdsVerschil = Datum.getTime() - GekozenDatum.getTime();
-        //alert(Datum);
+    function DagenBerekening() { 
+        //gekozen datum
+        let GekozenDatum = document.getElementById("GekozenDatum");
+        let GekozenDatum2 = new Date(GekozenDatum.value); 
+
+        let TijdsVerschil = GekozenDatum2.getTime() - Datum.getTime();
         let DagenVerschil = Math.round (TijdsVerschil / (1000 * 3600 * 24));
 
-        document.getElementById("HoeveelDagen").innerHTML = "er zit " + DagenVerschil + " dagen er tussen " + Datum + " en " + GekozenDatum ;
+        if (DagenVerschil == 1) {
+            document.getElementById("HoeveelDagen").innerHTML = "er zit " + DagenVerschil + " dag tussen " + Datum.toDateString() + " en " + GekozenDatum2.toDateString() ;
+        } else {
+            document.getElementById("HoeveelDagen").innerHTML = "er zitten " + DagenVerschil + " dagen tussen " + Datum.toDateString() + " en " + GekozenDatum2.toDateString() ;
+        }    
     }
 </script>
